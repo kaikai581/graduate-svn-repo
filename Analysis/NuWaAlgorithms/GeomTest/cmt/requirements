@@ -1,0 +1,9 @@
+package GeomTest
+
+use DataSvc           v* DataModel
+use DataUtilities     v* DataModel
+use DetHelpers        v* Detector    # needed for IRpcGeomInfoSvc
+
+library GeomTest *.cpp
+apply_pattern  component_library library=GeomTest
+apply_pattern  install_python_modules

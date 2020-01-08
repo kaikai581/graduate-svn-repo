@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\special{papersize=8.5in,11in}
+\usepackage{libertine}
+\usepackage{geometry}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\begin{document}
+
+\cite{2013_1}
+\cite{2013_2}
+\cite{2012_1}
+\cite{2012_2}
+\cite{2011_1}
+\cite{2011_2}
+\cite{2010}
+\cite{2009}
+\cite{2008}
+\cite{2007}
+\cite{2005}
+\newpage
+\setcounter{page}{1}
+\title{List of Publications}
+\author{Shih-Kai Lin}
+\date{}
+\maketitle
+
+\bibliographystyle{ieeetr}
+\bibliography{ListOfPublicationsRef}
+
+\end{document}

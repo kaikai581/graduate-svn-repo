@@ -1,0 +1,13 @@
+Dear recruiter:
+
+It was my pleasure to talk with the representatives of cPanel at Texas Job Fair on Feb. 6 at Rice University. I was very excited about knowing of the software developer positions working with Linux operating system.
+
+I am applying for this position because I think my past experience squarely meets the job requirements of the position. Being a student working on science, I use open source software and script languages like BASH and python to analyze a huge amount of data on Linux since 2005. Along the way I developed a strong interest in solving real world problems such as particle Monte Carlo simulation and detector geometry with open source software like GSL and Armadillo. The intention to provide an event database service also motivated me to design and implement an SQL database with MySQL , Apache and phpMyAdmin. Linux has become my favorite platform for real world problem solving.
+
+Needless to say, cPanel, being a web hosting company working mainly with Linux, is an ideal company for me to offer my passion and skills in Linux. I believe I can bring my strong problem solving skills to cPanel and make immediate contributions.
+
+I would welcome a personal interview to tell you more about my qualifications, as well as what I can do for cPanel. I appreciate your taking the time to review my credentials and experience. Again, thank you for your consideration.
+
+Sincerely yours,
+
+Shih-Kai Lin

@@ -1,0 +1,282 @@
+<html>
+<head>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"></link>
+<link href="css/perfect-scrollbar.css" rel="stylesheet"></link>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/perfect-scrollbar.js"></script>
+</script>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      margin: 0px;
+      height: 100%;
+      font-family:"Elephant", Times, serif;
+    }
+    #container {
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      overflow: hidden;
+    }
+    #header {
+      position: absolute;
+      top:0;
+      left:240px;
+      right:240px;
+      height:30px;
+      background-color:#FFA500;
+    }
+    h1 {
+      font-size:1.5em;
+      text-align:center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    #footer {
+      background-color:#FFA500;
+      text-align:center;
+      height:18px;
+      font-size:12px;
+      font-family:"Calibri", Arial, sans-serif;
+      bottom:0;
+      position: absolute;
+      left:240px;
+      right:240px;
+      clear:both;
+    }
+    #menu {
+      position: fixed;
+      background-color:#33FF66;
+      float:left;
+      margin-top:0;
+      margin-bottom:0;
+      width:240px;
+      top:0;
+      bottom:0;
+      overflow: hidden;
+    }
+    #submenu {
+      font-family:"Calibri", Arial, sans-serif;
+      position: absolute;
+      background-color:#33FF66;
+      margin-top:0;
+      margin-bottom:0;
+      width:240px;
+      right:0;
+      top:0;
+      bottom:0;
+      overflow: hidden;
+    }
+    table {
+      margin:0px auto;
+    }
+    td, th {
+      padding: 0px;
+    }
+    .tblcb {
+      width: 50px;
+    }
+    #muonselector {
+      text-align:center;
+      margin-top:0;
+      margin-bottom:0;
+    }
+    label {
+      font-family:"Calibri", Arial, sans-serif;
+      display: inline-block;
+      text-align: right;
+      float: left;
+      width: 90px;
+      clear: left;
+    }
+    input {
+      display: inline-block;
+      float: left;
+      width: 80px;
+    }
+    #content {
+      position:fixed;
+      margin-top:0;
+      margin-bottom:0;
+      top:30px;
+      left:240px;
+      right:240px;
+      bottom:18px;
+    }
+    .dbmanip {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+  
+    <div id="header">
+    <h1>Daya Bay Muon Event Display v0.4.3.1</h1></div>
+
+    <div id="menu">
+      <h2 id="muonselector">Muon Selector</h2>
+      <form>
+        
+        <label for="hallSelect">Hall:</label>
+        <select id="hallSelect">
+          <option value = "1" selected>EH1</option>
+          <option value = "2">EH2</option>
+          <option value = "4">EH3</option>
+        </select>
+        <button type="button" id="reload">reload</button></br>
+        
+        <label for="trigIdSelect">Muon ID:</label>
+        <select id="trigIdSelect">
+        </select>
+        <button type="button" id="prevmu"><</button>
+        <button type="button" id="nextmu">></button>
+        </br>
+        
+        <fieldset>
+          <legend>trigger details:</legend>
+          <label>run number:</label><input id="runnum" type="text"><br>
+          <label>file number:</label><input id="filenum" type="text"><br>
+          <label>date:</label><input type="text" id="datepicker"><br>
+          <label>time:</label><input type="text" id="timepicker" disabled><br>
+          
+          <fieldset>
+            <legend>trigger numbers:</legend>
+            <label>AD1:</label><input id="tnad1" type="text" name="tn1"><br>
+            <label>AD2:</label><input id="tnad2" type="text" name="tn2"><br>
+            <label>AD3:</label><input id="tnad3" type="text" name="tn3"><br>
+            <label>AD4:</label><input id="tnad4" type="text" name="tn4"><br>
+            <label>IWS:</label><input id="tniws" type="text" name="tn5"><br>
+            <label>OWS:</label><input id="tnows" type="text" name="tn6"><br>
+            <label>RPC:</label><input id="tnrpc" type="text" name="tn7"><br>
+          </fieldset>
+          
+          <button type="button" id="find" class="dbmanip">find</button>
+          <button type="button" id="clear" class="dbmanip">clear</button>
+        </fieldset>
+
+      </form>
+    </div>
+
+    <div id="content">
+    </div>
+    
+    <div id="submenu">
+      <fieldset>
+        <legend>show/hide:</legend>
+        <table id="showhidetable">
+          <tr>
+            <th>detector</th><th>sensor</th><th>recon</th>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="AD1">AD1</td>
+            <td>
+              <input type="checkbox" name="shsen1" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec1" class="tblcb" checked>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="AD2">AD2</td>
+            <td>
+              <input type="checkbox" name="shsen2" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec2" class="tblcb" checked>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="AD3">AD3</td>
+            <td>
+              <input type="checkbox" name="shsen3" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec3" class="tblcb" checked>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="AD4">AD4</td>
+            <td>
+              <input type="checkbox" name="shsen4" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec4" class="tblcb" checked>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="IWS">IWS</td>
+            <td>
+              <input type="checkbox" name="shsen5" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec5" class="tblcb" checked>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="OWS">OWS</td>
+            <td>
+              <input type="checkbox" name="shsen6" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec6" class="tblcb" checked>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:center;" name="RPC">RPC</td>
+            <td>
+              <input type="checkbox" name="shsen7" class="tblcb" checked>
+            </td>
+            <td>
+              <input type="checkbox" name="shrec7" class="tblcb" checked>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      
+      <fieldset>
+        <legend>controls:</legend>
+        <ul>
+          <li>press and drag left mouse button to rotate</li>
+          <li>scroll middle mouse button to zoom</li>
+          <li>press and drag right mouse button to translate</li>
+        </ul>
+      </fieldset>
+    </div>
+    
+    <div id="footer">
+      <address>
+      By Shih-Kai Lin email: <a href="mailto:kaikai581@hotmail.com">kaikai581@hotmail.com</a>
+      </address>
+    </div>
+  
+  </div>
+  
+  
+  <!--
+  javascripts after DOM
+  -->
+
+  <script src="js/three.min.js"></script>
+  
+  <!--
+    able to choose between the 2 different controls
+  -->
+  <script src="js/OrbitControls.js"></script>
+  <script src="js/TrackballControls.js"></script>
+  
+  <script src="js/Loader.js"></script>
+  
+  <script src="js/JSONLoader.js"></script>
+  
+  <script src="js/renderhall.js"></script>
+  
+</body>
+</html> 

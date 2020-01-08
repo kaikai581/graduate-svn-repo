@@ -1,0 +1,9 @@
+#!/bin/sh
+INFILEPATH=/home/sklin/Data/DayaBayData/2012/p12b/Neutrino/0101/
+WORKDIR=/home/sklin/Work/Analysis/RpcEffRec/CrossDetector/OfficialProduction/
+OUTFILEPATH=${WORKDIR}file/
+
+for fn in `ls ${INFILEPATH}|grep root|grep EH3`
+do
+  ${WORKDIR}evtsel -i ${INFILEPATH}${fn} -o ${OUTFILEPATH}
+done

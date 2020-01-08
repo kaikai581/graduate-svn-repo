@@ -1,0 +1,6 @@
+This sample.root was created by Miao circa 17th July using ...
+
+nuwa.py -A none -l 5 -n 1000 -m Quickstart.PrintRawData -o sample.root /publicfs/dyb/ingest_data/data/exp/dayabay/2010/TestDAQ/NoTag/0702/daq.NoTag.0002307.ADCalib.SAB-AD1.SFO-1._0001.data
+
+
+

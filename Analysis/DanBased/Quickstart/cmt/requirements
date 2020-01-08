@@ -1,0 +1,9 @@
+package Quickstart
+
+include_path none
+
+use DybPolicy
+use GaudiPython
+use DybTest
+
+apply_pattern install_python_modules

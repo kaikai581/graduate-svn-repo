@@ -1,0 +1,12 @@
+package Muon2PassAnalysis
+
+#use mysql             v* LCG_Interfaces
+#use BaseEvent         v* DataModel
+use MySQLCppConn      v*
+use MuonTagging       v* Tagging      # for Event/UserDataHeader.h
+use DataSvc           v* DataModel
+use DataUtilities     v* DataModel
+
+library Muon2PassAnalysis *.cpp
+apply_pattern  component_library library=Muon2PassAnalysis
+apply_pattern  install_python_modules

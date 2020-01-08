@@ -1,0 +1,79 @@
+% Cover letter using letter.cls
+\documentclass{letter} % Uses 10pt
+\usepackage[papersize={8.5in,11in}]{geometry}
+\usepackage{fontspec} % For loading fonts
+\usepackage{hyperref}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{libertine}
+
+% the following commands control the margins:
+\topmargin=-1in    % Make letterhead start about 1 inch from top of page 
+\textheight=8.5in    % text height can be bigger for a longer letter
+\oddsidemargin=0pt   % leftmargin is 1 inch
+\textwidth=6.5in     % textwidth of 6.5in leaves 1 inch for right margin
+
+\begin{document}
+
+\signature{Shih-Kai Lin}           % name for signature 
+\longindentation=0pt                       % needed to get closing flush left
+\let\raggedleft\raggedright                % needed to get date flush left
+ 
+ 
+\begin{letter}{Dr. Brian Rebel \\
+Fermilab \\
+P.O. Box 500 \\
+Batavia, IL 60510-500}
+
+\begin{center}
+{\large\bf Shih-Kai Lin} 
+\end{center}
+\medskip\hrule height 1pt
+\begin{center}
+{2121 El Paseo St Apt 1307 \\   Houston, TX 77054 \\ (832) 907-9035 \\ shihkailin78@gmail.com} 
+\end{center} \vfill % forces letterhead to top of page
+ 
+ 
+\opening{Dear Dr. Rebel:} 
+ 
+\noindent %PARAGRAPH ONE: State reason for letter, name the position or type 
+%of work you are applying for and identify source from  which  you 
+%learned   of   the  opening.  (i.e.  Career  Development  Center, 
+%newspaper, employment service, personal contact). 
+I am submitting my curriculum vitae for consideration for the Postdoctoral Research Associate position you kindly informed me of in the email. After knowing the experiments involved in this job, I believe my skills and work experience are a good fit for this position.
+ 
+\noindent %PARAGRAPH  TWO:  Indicate why you are interested in the position, 
+%the company, its products, services - above all, stress what  you 
+%can  do  for  the employer. If you are a recent graduate, explain 
+%how your academic background makes you a qualified candidate  for 
+%the  position.  If  you have practical work experience, point out 
+%specific achievements or unique qualifications. Try not to repeat 
+%the  same  information  the reader will find in the resume. Refer 
+%the reader to the enclosed resume or application which summarizes 
+%your  qualifications,  training,  and experiences. The purpose of 
+%this section is to strengthen your resume  by  providing  details 
+%which bring your experiences to life. 
+I am a physics Ph.D. student at University of Houston and joined the Daya Bay reactor neutrino experiment since 2009. Our group's main interest is in the Resistive Plate Chamber (RPC) which serves as a part of the Daya Bay muon system. In order to learn about the RPC exhaustively, I, together with my adviser, successfully designed and built several small RPCs from scratch which turned out doing their job well as charged particle detectors. Since 2010, Daya Bay was under active construction and I had stayed onsite and participated in lots of hardware and construction activities such as RPC module installation, water Cherenkov pool PMT assembly, cable routing and cabling. Through the involvement, I gained valuable experience in electronics, hardware trouble shooting and team work.
+
+Ever since Daya Bay's first physics data taking, my focus shifted to analysis. I was interested in the RPC performance, therefore I devised a way to measure the RPC efficiency in situ, applied it to the physics data and in turn measured the underground muon flux. My thesis work is on the neutron production by muons which is an important background for underground experiments. This work requires to reconstruct muon tracks which I achieved by fitting a straight line to existing points from each muon detector. I am also interested in event display and a \href{http://heplinux3.phys.uh.edu/~sklin/WebTryout/MuonViewer/v0-4-3-1/main.html}{web page} was set up for checking my reconstruction results. In a coming muon induced neutron paper, my result will serve as one of the independent analyses. Owning to my fascination with applying theory to real world problems, NO$\nu$A data analysis seems particularly exciting for me such as applying advanced machine learning techniques like artificial neural network or decision tree to particle identification. No mention resolving the mass hierarchy and measuring the CP-violating phase are the next big discoveries every neutrino physicist is yearning for.
+
+
+\noindent %PARAGRAPH THREE: Request a personal interview and  indicate  your 
+%flexibility as to the time and place. Repeat your phone number in 
+%the letter and offer assistance to help in a speedy response. For 
+%example,  state that you will be in the city where the company is 
+%located on a certain date and would like to set up an  interview. 
+%Or,  state  that  you  will  call  on a certain date to set up an 
+%interview. End the letter by thanking  the  employer  for  taking 
+%time to consider your credentials. 
+These are my brief qualifications for the postdoc position for NO$\nu$A or muon g-2 at Fermilab. Enclosed are my curriculum vitae and publication record. I appreciate your taking the time to review my credentials and experience. Again, thank you for your consideration. 
+ 
+\closing{Sincerely yours,} 
+ 
+
+ 
+\encl{curriculum vitae}					% Enclosures
+
+\end{letter}
+ 
+
+\end{document}

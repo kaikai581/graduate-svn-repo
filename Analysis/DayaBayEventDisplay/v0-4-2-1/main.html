@@ -1,0 +1,70 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+</script>
+  <style>
+    body {
+      margin: 0px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<div id="arena">
+<div id="widgets" style="position:absolute;float:right;height:30;width:8em">
+  <form>
+    <label for="trigIdSelect">Trigger ID</label>
+    <select id="trigIdSelect">
+    </select></br>
+    <fieldset class="checkboxgroup">
+      <p>Show Detector</p>
+      <input type="checkbox" id="check1" class="detector" value="1" checked="checked" />
+      <label for="check1" id="checklabel1">AD1</label></br>
+      <input type="checkbox" id="check2" class="detector" value="2" checked="checked" />
+      <label for="check2" id="checklabel2">AD2</label></br>
+      <input type="checkbox" id="check3" class="detector" value="3" checked="checked" />
+      <label for="check3" id="checklabel3">AD3</label></br>
+      <input type="checkbox" id="check4" class="detector" value="4" checked="checked" />
+      <label for="check4" id="checklabel4">AD4</label></br>
+      <input type="checkbox" id="check5" class="detector" value="5" checked="checked" />
+      <label for="check5" id="checklabel5">IWS</label></br>
+      <input type="checkbox" id="check6" class="detector" value="6" checked="checked" />
+      <label for="check6" id="checklabel6">OWS</label></br>
+      <input type="checkbox" id="check7" class="detector" value="7" checked="checked" />
+      <label for="check7" id="checklabel7">RPC</label></br>
+    </fieldset>
+  </form>
+</div>
+<div id="container" style="width:600;position:relative;top:20px;" ></div>
+</div>
+<!--
+<canvas id="container" width="640" height="480">
+  Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+</canvas>
+-->
+<!--
+<h1>Welcome to my home page.</h1>
+<?php include 'vars.php';
+echo "I have a $color $car"; // I have a red BMW
+?>
+-->
+<!--
+<?php include 'MySQLComm.php';
+?>
+-->
+
+
+
+<script src="js/three.js/build/three.min.js"></script>
+
+<script src="js/three.js/examples/js/controls/TrackballControls.js"></script>
+
+<script src="js/three.js/src/loaders/Loader.js"></script>
+
+<script src="js/three.js/src/loaders/JSONLoader.js"></script>
+
+<script src="js/renderevent.js"></script>
+
+</body>
+</html> 

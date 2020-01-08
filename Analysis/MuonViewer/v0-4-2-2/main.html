@@ -1,0 +1,117 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+</script>
+  <style>
+    hrml {
+      height: 100%;
+    }
+    body {
+      margin: 0px;
+      height: 100%;
+    }
+    #container {
+      position:fixed;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      overflow: hidden;
+    }
+    h1 {
+      text-align:center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    #menu {
+      background-color:#33FF66;
+      float:left;
+      margin-top:0;
+      margin-bottom:0;
+      width:300px;
+      height:92%;
+    }
+    #footer {
+      background-color:#FFA500;
+      clear:both;
+      text-align:center;
+      height:8%;
+      font-size:12px;
+    }
+    #muonselector {
+      text-align:center;
+      font-family:"Elephant", Times, serif;
+      margin-top:0;
+      margin-bottom:0;
+    }
+    label {
+      font-family:"Calibri", Arial, sans-serif;
+      margin-left:10px;
+    }
+    #content {
+      position:fixed;
+      margin-top:0;
+      margin-bottom:0;
+      left:300px;
+      right:0;
+      height:92%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+  
+    <div id="header" style="background-color:#FFA500;">
+    <h1>Daya Bay Muon Event Display v0.4.2.2</h1></div>
+
+    <div id="menu">
+      <h2 id="muonselector">Muon Selector</h2>
+      <form>
+        
+        <label for="hallSelect">Hall</label>
+        <select id="hallSelect">
+          <option value = "1" selected>EH1</option>
+          <option value = "2">EH2</option>
+          <option value = "4">EH3</option>
+        </select></br>
+        
+        <label for="trigIdSelect">Muon ID</label>
+        <select id="trigIdSelect">
+        </select>
+        <button type="button" id="prevmu"><</button>
+        <button type="button" id="nextmu">></button>
+        </br>
+<!--
+        <input name="muontime" type="date">
+-->
+      </form>
+    </div>
+
+    <div id="content">
+    </div>
+
+    <div id="footer">
+      <address>
+      By Shih-Kai Lin email: <a href="mailto:kaikai581@hotmail.com">kaikai581@hotmail.com</a>
+      </address>
+    </div>
+  
+  </div>
+  
+  <!--
+  javascripts after DOM
+  -->
+
+  <script src="js/three.min.js"></script>
+  
+  <script src="js/OrbitControls.js"></script>
+  
+  <script src="js/three.js/src/loaders/Loader.js"></script>
+  
+  <script src="js/three.js/src/loaders/JSONLoader.js"></script>
+  
+  <script src="js/renderhall.js"></script>
+  
+</body>
+</html> 

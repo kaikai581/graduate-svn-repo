@@ -1,0 +1,185 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+</script>
+  <style>
+    body {
+      margin: 0px;
+      overflow: hidden;
+    }
+  </style>
+<!--
+<script>
+  $(document).ready(function() {
+    //$.post('MySQLComm.php',processData,"json");
+    $.getJSON('MySQLComm.php', processData);
+    function processData(data) {
+      //var infoHTML='<p>' + data[400].x_site + '</p>';
+      //$("div").html(infoHTML);
+      var infoHTML = '';
+      $.each(data, function(i, row) {
+        infoHTML+='<p>' + row.x_site + '</p>';
+      })
+      $("div").html(infoHTML)
+    }
+  });
+</script>
+-->
+</head>
+<body>
+
+<!--
+<form>
+  <label for="EH" id="exphall">Experimental Hall</label>
+  <select id="EH">
+    <option id="EH1" value="1">EH1</option>
+    <option id="EH2" value="2">EH2</option>
+    <option id="EH3" value="4">EH3</option>
+  </select></br>
+  <input type="checkbox" id="check1" class="detector" value="1" checked="checked" />
+  <label for="check1" id="checklabel1">AD1</label>
+  <input type="checkbox" id="check2" class="detector" value="2" checked="checked" />
+  <label for="check2" id="checklabel2">AD2</label>
+  <input type="checkbox" id="check3" class="detector" value="3" checked="checked" />
+  <label for="check3" id="checklabel3">AD3</label>
+  <input type="checkbox" id="check4" class="detector" value="4" checked="checked" />
+  <label for="check4" id="checklabel4">AD4</label>
+  <input type="checkbox" id="check5" class="detector" value="5" checked="checked" />
+  <label for="check5" id="checklabel5">IWS</label>
+  <input type="checkbox" id="check6" class="detector" value="6" checked="checked" />
+  <label for="check6" id="checklabel6">OWS</label>
+  <input type="checkbox" id="check7" class="detector" value="7" checked="checked" />
+  <label for="check7" id="checklabel7">RPC</label>
+</form>
+-->
+<!--
+<div style="position: absolute; z-index: 1">
+-->
+<div id="arena">
+<div id="widgets" style="position:absolute;float:right;height:30;width:8em">
+  <form>
+    <label for="EH" id="exphall">Experimental Hall</label>
+    <select id="EH">
+      <option id="EH1" value="1">EH1</option>
+      <option id="EH2" value="2">EH2</option>
+      <option id="EH3" value="4">EH3</option>
+    </select></br>
+    <fieldset class="checkboxgroup">
+      <p>Show Detector</p>
+      <input type="checkbox" id="check1" class="detector" value="1" checked="checked" />
+      <label for="check1" id="checklabel1">AD1</label></br>
+      <input type="checkbox" id="check2" class="detector" value="2" checked="checked" />
+      <label for="check2" id="checklabel2">AD2</label></br>
+      <input type="checkbox" id="check3" class="detector" value="3" checked="checked" />
+      <label for="check3" id="checklabel3">AD3</label></br>
+      <input type="checkbox" id="check4" class="detector" value="4" checked="checked" />
+      <label for="check4" id="checklabel4">AD4</label></br>
+      <input type="checkbox" id="check5" class="detector" value="5" checked="checked" />
+      <label for="check5" id="checklabel5">IWS</label></br>
+      <input type="checkbox" id="check6" class="detector" value="6" checked="checked" />
+      <label for="check6" id="checklabel6">OWS</label></br>
+      <input type="checkbox" id="check7" class="detector" value="7" checked="checked" />
+      <label for="check7" id="checklabel7">RPC</label></br>
+    </fieldset>
+  </form>
+</div>
+<div id="container" style="width:600;position:relative;top:20px;" ></div>
+</div>
+<!--
+<canvas id="container" width="640" height="480">
+  Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+</canvas>
+-->
+<!--
+<h1>Welcome to my home page.</h1>
+<?php include 'vars.php';
+echo "I have a $color $car"; // I have a red BMW
+?>
+-->
+<!--
+<?php include 'MySQLComm.php';
+?>
+-->
+
+
+
+<script src="js/three.min.js"></script>
+<!--
+<script src="js/three.min_orig.js"></script>
+-->
+
+<!--
+<script>
+
+    var camera, scene, renderer;
+    var geometry, material, mesh;
+
+    init();
+    animate();
+
+    function init() {
+
+        camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 1, 10000 );
+        camera.position.z = 1000;
+
+        scene = new THREE.Scene();
+
+        //geometry = new THREE.CubeGeometry( 200, 200, 200 );
+        geometry = new THREE.SphereGeometry( 100, 16, 16 );
+        material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
+        //material = new THREE.MeshLambertMaterial( { color: 0xFFFF66 } );
+        //material = new THREE.MeshBasicMaterial( { color: 0xFFFF66 } );
+
+        mesh = new THREE.Mesh( geometry, material );
+        mesh.scale.setY( .5 );
+        mesh.translate(100, new THREE.Vector3(1,0,0));
+        scene.add( mesh );
+
+        renderer = new THREE.CanvasRenderer();
+        //renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        
+        // create a point light
+        var pointLight = new THREE.PointLight(0xFFFFFF);
+        
+        // set its position
+        pointLight.position.x = 10;
+        pointLight.position.y = 10;
+        pointLight.position.z = 130;
+        
+        // add to the scene
+        scene.add(pointLight);
+
+        document.body.appendChild( renderer.domElement );
+
+    }
+
+    function animate() {
+
+        // note: three.js includes requestAnimationFrame shim
+        requestAnimationFrame( animate );
+
+        mesh.rotation.x += 0.01;
+        mesh.rotation.y += 0.02;
+
+        renderer.render( scene, camera );
+
+    }
+
+  $(document).ready(function() {
+    $.getJSON('MySQLComm.php', processData);
+    function processData(data) {
+      var infoHTML = '';
+      $.each(data, function(i, row) {
+        infoHTML+='<p>' + row.x_site + '</p>';
+      })
+      $("div").html(infoHTML)
+    }
+  });
+
+</script>
+-->
+<script src="js/renderhall.js"></script>
+
+</body>
+</html> 

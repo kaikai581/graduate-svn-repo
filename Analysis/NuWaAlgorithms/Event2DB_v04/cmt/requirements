@@ -1,0 +1,12 @@
+package Event2DB_v04
+
+#use mysql             v* LCG_Interfaces
+#use BaseEvent         v* DataModel
+use MySQLCppConn      v*
+use MuonTagging       v* Tagging      # for Event/UserDataHeader.h
+use DataSvc           v* DataModel
+use DataUtilities     v* DataModel
+
+library Event2DB_v04 *.cpp
+apply_pattern  component_library library=Event2DB_v04
+apply_pattern  install_python_modules

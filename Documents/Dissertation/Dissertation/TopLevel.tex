@@ -1,0 +1,67 @@
+\documentclass[12pt,letterpaper,oneside,openright]{book}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Page Layouts: Margins and Page Numbering %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{plain}  % Centering the page number at the bottom of the page
+\usepackage[left=1.5in,right=1.0in,top=1.0in,bottom=1.0in,includefoot,heightrounded]{geometry}  % Margins by the UH NSM thesis formatting
+\usepackage[doublespacing]{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{multicol}
+\usepackage{tocbibind}
+\usepackage{tikz} % for drawing Feynman diagrams
+\usepackage{amsmath} % for mathematics expressions
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Font Selection: Palatino or Minion %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{palatino}
+\usepackage{libertine}
+
+%\usepackage{fontspec} % For loading fonts
+%\setmainfont{Minion Pro} % Main document font
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+%\title{Neutron Production by Cosmic Muons at Daya Bay}
+
+
+\begin{document}
+
+% Define styles for the different kind of edges in a Feynman diagram
+\tikzset{
+    photon/.style={decorate, decoration={snake}, draw=red},
+    electron/.style={draw=blue, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=blue]{>}}}},
+    gluon/.style={decorate, draw=magenta,
+        decoration={coil,amplitude=4pt, segment length=5pt}} 
+}
+
+\frontmatter
+	\pagenumbering{roman}
+	\input{mainmatter/title.tex}
+	\setcounter{page}{2}
+	\input{mainmatter/signature.tex}
+	\input{mainmatter/abstract_title.tex}
+	\input{mainmatter/abstract.tex}
+	\tableofcontents
+	\listoffigures
+	\listoftables
+
+\mainmatter
+  \input{mainmatter/chapter01.tex}
+  \input{mainmatter/chapter02.tex}
+  \input{mainmatter/chapter03.tex}
+  \input{mainmatter/chapter04.tex}
+  \input{mainmatter/chapter05.tex}
+  \input{mainmatter/chapter06.tex}
+  %\input{EventRate.tex}
+  
+  \bibliographystyle{ieeetr}%Choose a bibliograhpic style
+  \bibliography{mainmatter/references}
+\end{document}

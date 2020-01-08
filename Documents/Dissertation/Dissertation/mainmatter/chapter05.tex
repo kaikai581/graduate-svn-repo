@@ -1,0 +1,27 @@
+\chapter{Neutron Yield}
+
+\section{Methodology}
+
+Ideally if one wants to measure the neutron yield by muons, one can shoot a monoenergetic muon beam at an infinite-long target and surround the target with a $4\pi$ detector which are able to identify and measure the momentum of all generated particles. This kind of idealization can be achieved closely with Daya Bay experiment.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+	\draw (0,0) ellipse (.1cm and .2cm);
+	\draw (0,0) ellipse (1cm and 2cm);
+	\draw (0,.2) -- (3,.2);
+	\draw (0,-.2) -- (3,-.2);
+\end{tikzpicture}
+\caption{An ideal muon induced neutron measurement} \label{fig:IdealMuN}
+\end{figure}
+
+Suppose we know the muon track with some reconstruction algorithm. For those muons passing through the inner acrylic vessel(IAV), we can form a imaginary cylinder coaxial with the track which is fully contained in the IAV. If we fix the radius of the imaginary cylinder, for each track we have to adjust its length so as to make the cylinder fully contained in the IAV. Only neutrons captured in the imaginary cylinder count. If we concatenate the imaginary cylinders one after another, the ideal experiment is approximately realized, with some differences,
+\begin{enumerate}
+	\item Underground muons are not monoenergetic.
+	\item The imaginary cylinders serve as both the target and the detector.
+	\item Generated particles are hard to detect except neutrons.
+\end{enumerate}
+
+Although most underground experiments are not designed for measuring the neutron yield by muons, a in situ measurement of neutron background is still desirable. Since the energy of the underground muons can never be controlled, instead of measuring neutron yield as a function of the incident muon energy, a common practice is to measure neutron yield as a function of the incident \emph{mean} muon energy. And since this measurement is \emph{inclusive}, we don't have to know every detail of each intermediate particle leading to neutron production.
+
+\section{Results}

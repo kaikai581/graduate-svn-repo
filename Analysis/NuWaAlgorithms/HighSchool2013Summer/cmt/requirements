@@ -1,0 +1,17 @@
+package HighSchool2013Summer
+
+use ReadoutEvent      v* DataModel
+use CalibReadoutEvent v* DataModel
+use RecEvent          v* DataModel
+use DataSvc           v* DataModel
+use DataUtilities     v* DataModel
+use BaseEvent         v* DataModel
+use DetHelpers        v* Detector
+use MuonTagging       v* Tagging
+use GSL               v* LCG_Interfaces
+#use ROOT              v* LCG_Interfaces
+#use LafKernel         v* NtupleAna
+
+library HighSchool2013Summer *.cpp
+apply_pattern  component_library library=HighSchool2013Summer
+apply_pattern  install_python_modules

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #controlPanel {
+        position:fixed;
+        top:0px;
+        left:0px;
+        width: 200px;
+        height: 100%;
+        background-color:MediumOrchid;
+        text-align: center;
+      }
+      #container {
+        position:fixed;
+        left: 200px;
+        right: 0px;
+        height: 100%;
+      }
+    </style>
+    
+    <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    
+  </head>
+  
+  <body>
+  
+    <div id="controlPanel">
+      <button type="button" id="toggleMaterial">Toggle Material</button><br>
+      <button type="button" id="changeMesh">Change Mesh</button>
+    </div>
+    <div id="container"></div>
+    <script src="js/three.min.js"></script>
+    <script src="js/Detector.js"></script>
+    <script src="js/stats.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script defer="defer">
+      
+      
+      // standard global variables
+      var container, scene, camera, renderer, controls;
+      
+      // custom global variables
+      var cube, sphere;
+      var geometryShapes = [];
+      var curGeom = 0;
+      
+      // this function is executed on each animation frame
+      function animate(){
+        requestAnimationFrame( animate );
+        renderer.render( scene, camera );
+        controls.update();
+      }
+
+      //////////////
+      // RENDERER //
+      //////////////
+      
+      // create and start the renderer; choose antialias setting.
+      //if ( Detector.webgl )
+        renderer = new THREE.WebGLRenderer( {antialias:true} );
+      //else
+        //renderer = new THREE.CanvasRenderer();
+      renderer.setSize($("#container").width(), $("#container").height());
+      $("#container").append(renderer.domElement);
+ 
+      // camera
+      var camera = new THREE.PerspectiveCamera(45, $("#container").width() / $("#container").height(), 1, 1000);
+      camera.position.y = -450;
+      camera.position.z = 400;
+      camera.rotation.x = 45 * (Math.PI / 180);
+ 
+      // scene
+      var scene = new THREE.Scene();
+ 
+      // cube
+      var cubeGeometry = new THREE.CubeGeometry( 100, 100, 100);
+      // sphere
+      var sphereGeometry = new THREE.SphereGeometry( 100);
+      
+      var materials = new THREE.MeshBasicMaterial( { color: 0x0000FF, wireframe: true } );
+      cube = new THREE.Mesh( cubeGeometry, materials );
+      sphere = new THREE.Mesh( sphereGeometry, materials );
+      
+      geometryShapes.push(cube);
+      geometryShapes.push(sphere);
+      
+      scene.add(geometryShapes[curGeom]);
+
+
+      //////////////
+      // CONTROLS //
+      //////////////
+    
+      // move mouse and: left   click to rotate, 
+      //                 middle click to zoom, 
+      //                 right  click to pan
+      controls = new THREE.OrbitControls( camera, renderer.domElement );
+      
+      // start animation
+      animate();
+      
+      
+      // event handlers
+      $( "#toggleMaterial" ).click(function() {
+        scene.children[0].material.wireframe = !cube.material.wireframe;
+      });
+      
+      $("#changeMesh").click(function() {
+        clearScene();
+        curGeom = (curGeom+1)%2;
+        scene.add(geometryShapes[curGeom]);
+      });
+      
+      // clear scene
+      function clearScene() {
+
+        for ( var i = scene.children.length - 1; i >= 0 ; i -- )
+          scene.remove(scene.children[ i ]);
+
+      }
+    </script>
+  
+  </body>
+</html> 

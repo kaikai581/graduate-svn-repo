@@ -1,0 +1,68 @@
+% Cover letter using letter.cls
+\documentclass{letter} % Uses 10pt
+\usepackage[papersize={8.5in,11in}]{geometry}
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+\setmainfont{Minion Pro} % Main document font
+\usepackage{xltxtra}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+% the following commands control the margins:
+\topmargin=-1in    % Make letterhead start about 1 inch from top of page 
+\textheight=8.5in    % text height can be bigger for a longer letter
+\oddsidemargin=0pt   % leftmargin is 1 inch
+\textwidth=6.5in     % textwidth of 6.5in leaves 1 inch for right margin
+
+\begin{document}
+
+\signature{Shih-Kai Lin}           % name for signature 
+\longindentation=0pt                       % needed to get closing flush left
+\let\raggedleft\raggedright                % needed to get date flush left
+ 
+ 
+\begin{letter}{Anna Dang \\
+FairfieldNodal \\
+1111 Gillingham Lane \\
+Sugar Land, Texas, USA}
+
+\begin{center}
+{\large\bf Shih-Kai Lin} 
+\end{center}
+\medskip\hrule height 1pt
+\begin{center}
+{2121 El Paseo St Apt 1307 \\   Houston, TX 77054 \\ (864) 349-5588 \\ shihkailin78@gmail.com} 
+\end{center} \vfill % forces letterhead to top of page
+ 
+ 
+\opening{Dear Ms. Dang:} 
+ 
+\noindent 
+I was pleased to learn of your need for a Geophysical Analyst form the JOBank database of our university's career center. This letter is to express my interest in bringing my years of expertise in data analysis and problem solving to your company.
+ 
+\noindent 
+As a physics graduate student I am fully aware of the situation of global energy consumption and energy crisis nowadays through talks given by people working at solar or oil industry. In order to maintain human beings' current life style, I feel eager to contribute to the energy industry. Having been working on analyzing a huge amount of data for 8 years, I have extensive experience in running concurrent jobs on data centers, making statistical inference from data and designing and developing algorithms to solve real world problems, identifying and correcting problems along the way. Besides, as a computer science graduate, I am trained to pick up any software, programming language or application programming interface effortlessly.
+
+I believe my experience fits the Geophysical Analyst position well and can make immediate contributions to FairfieldNodal.
+
+\noindent %PARAGRAPH THREE: Request a personal interview and  indicate  your 
+%flexibility as to the time and place. Repeat your phone number in 
+%the letter and offer assistance to help in a speedy response. For 
+%example,  state that you will be in the city where the company is 
+%located on a certain date and would like to set up an  interview. 
+%Or,  state  that  you  will  call  on a certain date to set up an 
+%interview. End the letter by thanking  the  employer  for  taking 
+%time to consider your credentials. 
+I would welcome a personal interview to tell you more about my qualifications, as well as what I can do for FairfieldNodal.  My phone number is (864) 349-5588 and I am available anytime for
+an interview. I appreciate your taking the time to review my credentials and experience. Again, thank you for your consideration. 
+ 
+\closing{Sincerely,} 
+ 
+
+ 
+\encl{resume}					% Enclosures
+
+\end{letter}
+ 
+
+\end{document}

@@ -1,0 +1,11 @@
+# This is a glue package for utilising external software "MySQL c++ connector"
+
+package MySQLCppConn
+
+include_dirs /eliza7/dayabay/scratch/sklin/Software/MySQLConnectorC++/include
+
+public 
+macro MySQLCppConn_cflags      "-Wall" 
+macro MySQLCppConn_cppflags    " $(MySQLCppConn_cflags) "
+
+macro MySQLCppConn_linkopts    "-L/eliza7/dayabay/scratch/sklin/Software/MySQLConnectorC++/lib -lmysqlcppconn"

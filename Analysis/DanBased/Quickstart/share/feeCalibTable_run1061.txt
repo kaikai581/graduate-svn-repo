@@ -1,0 +1,27 @@
+# Calibration for FEE channel properties
+# channelId description adcThresholdHigh adcThresholdLow adcBaselineHigh adcBaselineLow
+536937985 SABAD1-board06-connector01 0.0 0.0 63.06 63.06
+536937986 SABAD1-board06-connector02 0.0 0.0 65.35 65.35
+536937987 SABAD1-board06-connector03 0.0 0.0 57.07 57.07
+536937988 SABAD1-board06-connector04 0.0 0.0 47.81 47.81
+536937989 SABAD1-board06-connector05 0.0 0.0 50.51 50.51
+536937990 SABAD1-board06-connector06 0.0 0.0 58.46 58.46
+536937991 SABAD1-board06-connector07 0.0 0.0 50.40 50.40
+536937992 SABAD1-board06-connector08 0.0 0.0 58.05 58.05
+536937993 SABAD1-board06-connector09 0.0 0.0 41.34 41.34
+536937994 SABAD1-board06-connector10 0.0 0.0 54.31 54.31
+536937995 SABAD1-board06-connector11 0.0 0.0 52.09 52.09
+536937996 SABAD1-board06-connector12 0.0 0.0 60.60 60.60
+536937997 SABAD1-board06-connector13 0.0 0.0 42.06 42.06
+536937998 SABAD1-board06-connector14 0.0 0.0 54.09 54.09
+536937999 SABAD1-board06-connector15 0.0 0.0 54.23 54.23
+536938000 SABAD1-board06-connector16 0.0 0.0 46.72 46.72
+536938497 SABAD1-board08-connector01 0.0 0.0 72.28 72.28
+536938498 SABAD1-board08-connector02 0.0 0.0 50.23 50.23
+536938499 SABAD1-board08-connector03 0.0 0.0 61.08 61.08
+536938500 SABAD1-board08-connector04 0.0 0.0 74.41 74.41
+536938501 SABAD1-board08-connector05 0.0 0.0 58.42 58.42
+536938502 SABAD1-board08-connector06 0.0 0.0 54.07 54.07
+536938503 SABAD1-board08-connector07 0.0 0.0 58.79 58.79
+536938504 SABAD1-board08-connector08 0.0 0.0 48.90 48.90
+536938505 SABAD1-board08-connector09 0.0 0.0 45.54 45.54

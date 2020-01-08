@@ -1,0 +1,12 @@
+package RpcGeom2DB
+
+#use mysql             v* LCG_Interfaces
+#use BaseEvent         v* DataModel
+use MySQLCppConn      v*
+use DataSvc           v* DataModel
+use DataUtilities     v* DataModel
+use DetHelpers        v* Detector    # needed for IRpcGeomInfoSvc
+
+library RpcGeom2DB *.cpp
+apply_pattern  component_library library=RpcGeom2DB
+apply_pattern  install_python_modules

@@ -1,0 +1,7 @@
+1. Use bash script qsubproduction.sh to submit batch jobs on PDSF.
+
+2. Use ROOT script EffCal.cpp to obtain efficiency plots for one day.
+
+3. Use ROOT script EffVsTime.cpp to get efficiency over time.
+
+4. Use ROOT script DrawEffVsTime.cpp to plot efficiency over time.

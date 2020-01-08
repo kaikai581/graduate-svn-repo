@@ -1,0 +1,285 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%\documentclass[a4paper,10pt]{article} % Default font size and paper size
+\documentclass[11pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+\setmainfont{Minion Pro} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+\usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\Huge Shih-Kai \textsc{Lin}}\bigskip\par} % Your name
+
+\section{Personal Data}
+
+\begin{tabular}{rl}
+%\textsc{Place and Date of Birth:} & Canada  | 20 November 1987 \\
+\textsc{Address:} & 2121 El Paseo St Apt 1307, Houston, TX, 77054-3223 \\
+\textsc{Phone:} & (832) 907-9035 \\
+\textsc{email:} & \href{mailto:shihkailin78@gmail.com}{shihkailin78@gmail.com} \\
+\textsc{LinkedIn:} & \href{https://www.linkedin.com/in/shihkailin}{https://www.linkedin.com/in/shihkailin}
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\section{Objective}
+Looking for a position in data analyst.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabular}{rl}
+\textsc{Aug} 2014 & Doctor of Philosophy in \textsc{Physics}, \textbf{University of Houston}, Houston, TX\\
+ &\normalsize \textsc{Gpa}: 3.86/4.0 \\%\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\
+&\\
+
+%------------------------------------------------
+
+\textsc{June} 2005 & Master of Science in \textsc{Physics}, \textbf{National Taiwan University}, Taipei, Taiwan \\
+&\\
+
+%------------------------------------------------
+
+\textsc{June} 2001 & Bachelor of Science in \textsc{Computer Science}, \textbf{National Taiwan University}, Taipei, Taiwan\\
+&\\
+
+
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	QUALIFICATION
+%----------------------------------------------------------------------------------------
+
+\section{Summary of Qualifications}
+\begin{itemize}
+	\item Hands-on experience in relational database design and implementation with MySQL.
+%  \item 3 years of experience in concurrent job management with Sun Grid Engine on National Energy Research Scientific Computing Center.
+  \item 8 years of experience in large quantity statistical data analysis.
+  \item 8 years of experience in programming and problem solving in Linux.
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{tabular}{r|p{12cm}}
+\emph{\textsc{Jan 2009} - Current} & Research assistant at \textsc{University of Houston}, Houston, TX \\
+& \small
+\begin{itemize}
+  \item Developed a web based 3D muon event display with MySQL and WebGL technology.
+  \item	Analyzed data for neutron production by cosmic ray muons.
+  \item Developed a reconstruction algorithm to reconstruct the incident position and the track of cosmic ray muons.
+  \item Monte Carlo simulation on photoelectron production by photons and electron transport in Bakelite.
+  \item During hardware installation, led a team of technicians to route 400 electronic cables from a 10m deep pool to the electronics control room in a week.
+  \item Designed and built a gas detector for monitoring the gas composition.
+%  \item Designed and built a collimator for shielding and collimating $^{60}$Co.
+\end{itemize}\\
+\multicolumn{2}{c}{} \\
+\end{tabular}\newpage
+%------------------------------------------------
+\begin{tabular}{r|p{12cm}}
+\textsc{Aug 2005 - Dec 2008} & Research assistant at \textsc{Academia Sinica}, Taipei, Taiwan \\
+& \small
+\begin{itemize}
+  \item Analyzed data for setting limits on dark matter parameters.
+  \item Developed an algorithm utilizing Fast Fourier Transform spectra to reject near-threshold detector noise.
+%  \item Calibrated the Ge detector with $^{137}$Cs, $^{60}$Co, $^{55}$Fe, $^{32}$P, etc.
+\end{itemize}
+\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Sept 2003 - Jul 2005} & Research assistant at \textsc{National Taiwan University}, Taipei, Taiwan \\
+& \small
+\begin{itemize}
+  \item Measured and published a paper on the transport properties of Indium Gallium Nitride.
+\end{itemize}
+\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Oct 2001 - Mar 2003} & Lieutenant, \textsc{Mandatory Military Service} \\
+& \small
+\begin{itemize}
+  \item Maintained and developed a windows application for database management of parts of radio equipment with Borland Delphi.
+\end{itemize}
+
+\end{tabular}
+
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\section{Honors \& Activities}
+
+\begin{tabular}{rl}
+\textsc{Apr} 2013 & Oral presentation at the American Physical Society Meeting in Denver \\
+\textsc{Mar} 2013 & American Physical Society Membership \\
+\textsc{Nov} 2009 & Golden Key International Honour Society \\
+2005 & Government Fellowship for Studying Abroad from Ministry of Education, Taiwan \\
+1992 & Silver medal in junior high school mathematics contest in Kaohsiung, Taiwan \\
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+%\section{Languages}
+%
+%\begin{tabular}{rl}
+%\textsc{English:} & Fluent\\
+%
+%\textsc{Italian:} & Mothertongue\\
+%
+%\textsc{French:} & Basic Knowledge\\
+%\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS 
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+\begin{tabular}{rl}
+Programming Language: & \textsc{C/C++}, \textsc{MS Visual C++ 4.0}, \textsc{Borland Delphi}, \textsc{HTML}, \textsc{Python}, \textsc{Bash},   \\
+& SQL, \textsc{JavaScript}, PHP, AJAX, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
+
+Software \& Library: & \textsc{MySQL}, \textsc{SQLite}, \textsc{jQuery}, \textsc{Three.js}, \textsc{phpMyAdmin}, \textsc{Apache}, \textsc{Squid}, \\
+& \textsc{MySQL C++ Connector}, \textsc{Origin}, \textsc{Gaudi}, ROOT, GSL, \textsc{Armadillo} \\
+
+Operating System: & \textsc{Windows}, \textsc{Linux} (both \textsc{Debian} and \textsc{Red Hat} based) \\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+%\section{Interests and Activities}
+%
+%Technology, Open-Source, Programming\\
+%Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
+%Football, Travelling
+
+%----------------------------------------------------------------------------------------
+
+%\newpage
+
+%----------------------------------------------------------------------------------------
+%	GRADE TABLES
+%----------------------------------------------------------------------------------------
+
+%\par{\centering\Large \hypertarget{grds}{Master of Science in \textsc{Finance}}\par}\large{\centering Grades\par}\normalsize
+%
+%\begin{center}
+%\begin{tabular}{lcc}
+%\multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade}&\textsc{Credit Hrs}\\ \hline
+%Corporate Finance (Valuation) & 25 & 6\\
+%Financial Statement Analysis & 28 & 6\\
+%Statistics & 27 & 6\\
+%Theory of Finance & 26 & 6\\
+%Quantitative Methods for Finance & 30 & 6\\
+%Econometrics & 24 & 6\\
+%Derivatives & 31 & 6\\
+%Management of Financial and Insurance Companies & 30 & 6\\
+%Business Law & 31 & 6\\
+%Investment Banking	& 28 & 6\\ \\		
+%Behavioral Models for Economics and Finance	 & 29 & 6\\
+%Numerical Methods for Finance & 29 & 6\\
+%Advanced Derivatives & 30 & 6\\
+%Fixed Income (Advanced Methods) & 30 & 6\\ \\
+%English Language & 30 &	4\\
+%French Language & 31 &	4\\	
+%Internship & & 8\\		
+%Final Thesis & & 20\\	
+%& Total & 120\\\cline{2-3}
+%&\textsc{Gpa}&\textbf{8.0}
+%\end{tabular}
+%\end{center}
+%\bigskip
+%\hrule
+%\bigskip
+
+%------------------------------------------------
+
+%\bigskip
+%
+%\par{\centering\Large \hypertarget{grds_usc}{Exchange Program at \textsc{usc}, Los Angeles}\par}\large{\centering Grades\par}\normalsize
+%
+%\begin{center}
+%\begin{tabular}{lcc}
+%\multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade} & \textsc{Grade Points}\\ 
+%\hline
+%Corporate Financial Strategy & A & 4\\
+%Derivatives & A & 4\\
+%Money, Credit, and Banking & A & 4\\
+%Business Strategy & A- & 3.5\\
+%& &\\\cline{2-3}
+%& \textsc{Gpa} & \textbf{3.875}
+%\end{tabular}
+%\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

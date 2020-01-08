@@ -1,0 +1,15 @@
+package StoppedMuon
+
+use ReadoutEvent      v* DataModel
+use CalibReadoutEvent v* DataModel
+use RecEvent          v* DataModel
+use DataSvc           v* DataModel
+use DataUtilities     v* DataModel
+use BaseEvent         v* DataModel
+use DetHelpers        v* Detector
+use MuonTagging       v* Tagging
+#use LafKernel         v* NtupleAna
+
+library StoppedMuon *.cpp
+apply_pattern  component_library library=StoppedMuon
+apply_pattern  install_python_modules

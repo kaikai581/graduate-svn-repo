@@ -1,0 +1,13 @@
+Dear recruiter:
+
+I am submitting my resume for consideration for the software development engineer position advertised in the JOBank database of our university’s career center.
+
+I am applying for this position because I think my past experience squarely meets the job requirements of the position. I am always enthralled by solving the real world problems since I was in college. As a Computer Science graduate working on solving real world problems in physical science for years, I have dealt with a variety of scientific problems spanning all kinds of disciplines such as signal processing, 3D geometry, event reconstruction and Monte Carlo simulation. I am good at articulating the problem at hand and developing computer algorithms to solve it. I am also strongly self-motivated to embrace new technologies such as WebGL which are necessary or facilitative for solving problems.
+
+Needless to say, Amazon, being a Fortune 500 company, confronts numerous real world problems to solve. I believe I can bring my strong problem solving skills to Amazon and make immediate contributions.
+
+I would welcome a personal interview to tell you more about my qualifications, as well as what I can do for Amazon. I appreciate your taking the time to review my credentials and experience. Again, thank you for your consideration.
+
+Sincerely yours,
+
+Shih-Kai Lin

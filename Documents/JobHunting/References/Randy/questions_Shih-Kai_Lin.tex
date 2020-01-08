@@ -1,0 +1,163 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frequently Asked Questions
+% LaTeX Template
+% Version 1.0 (22/7/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adam Glesser (adamglesser@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry} % Required to make the margins smaller to fit more content on each page
+\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
+\usepackage{todonotes} % Required for the boxes that questions appear in
+\usepackage{tocloft} % Required to give customize the table of contents to display questions
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{palatino} % Use the Palatino font
+%\usepackage{bookman}
+\usepackage{tabularx}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+% Create and define the list of questions
+\newlistof{questions}{faq}{\large List of Frequently Asked Questions} % This creates a new table of contents-like environment that will output a file with extension .faq
+\setlength\cftbeforefaqtitleskip{4em} % Adjusts the vertical space between the title and subtitle
+\setlength\cftafterfaqtitleskip{1em} % Adjusts the vertical space between the subtitle and the first question
+\setlength\cftparskip{.3em} % Adjusts the vertical space between questions in the list of questions
+
+% Create the command used for questions
+\newcommand{\question}[1] % This is what you will use to create a new question
+{
+\refstepcounter{questions} % Increases the questions counter, this can be referenced anywhere with \thequestions
+\par\noindent % Creates a new unindented paragraph
+\phantomsection % Needed for hyperref compatibility with the \addcontensline command
+\addcontentsline{faq}{questions}{#1} % Adds the question to the list of questions
+\todo[inline, color=green!40]{\textbf{#1}} % Uses the todonotes package to create a fancy box to put the question
+\vspace{1em} % White space after the question before the start of the answer
+}
+
+% Uncomment the line below to get rid of the trailing dots in the table of contents
+%\renewcommand{\cftdot}{}
+
+% Uncomment the two lines below to get rid of the numbers in the table of contents
+%\let\Contentsline\contentsline
+%\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND LIST OF QUESTIONS
+%----------------------------------------------------------------------------------------
+
+%\begin{center}
+%\Huge{\bf \emph{A Template for FAQ's}} % Main title
+%\end{center}
+%
+%\listofquestions % This prints the subtitle and a list of all of your questions
+%
+%\newpage % Comment this if you would like your questions and answers to start immediately after table of questions
+
+%----------------------------------------------------------------------------------------
+%	QUESTIONS AND ANSWERS
+%----------------------------------------------------------------------------------------
+
+\question{Thesis topic}\label{new-question}
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\linewidth}{rX}
+title & \emph{Neutron Production by Cosmic Ray Muons} \\
+description & Neutrons produced by cosmic ray muons are a background of underground experiments. Understanding neutron yield is particularly important for future low background experiments. In this work mechanisms of neutron production by muons are discussed and neutron yield is measured with data from Daya Bay Reactor Neutrino Experiment.
+\end{tabularx}
+\end{table}
+
+%\begin{verbatim}
+%\question{A question that needs answering}\label{question-label}
+%
+%The answer to this question.
+%\end{verbatim}
+
+%------------------------------------------------
+
+\question{Things I have done on Daya Bay}\label{labels}
+
+\textbf{hardware} \\
+\\
+At University of Houston
+\begin{itemize}
+\item Designed and built a small RPC from scratch.
+\item RPC bench tests of detector response to different particles and gas compositions.
+\end{itemize}
+At Daya Bay, participated in
+\begin{itemize}
+\item RPC bare chamber QC/QA in Beijing.
+\item MACRO PMT pressure test.
+\item AD PMT transportation.
+\item RPC module installation.
+\item Water pool PMT assembly, cable routing and cabling. \\
+\end{itemize}
+
+\textbf{analysis}
+\begin{itemize}
+\item RPC position reconstruction.
+\item RPC performance and muon flux studies.
+\item Neutron yield measurement.
+\end{itemize}
+
+%This is not necessary, but it does give you a way of linking to a different question. In order to link to another question you simply need to add the following:
+%
+%\begin{verbatim}
+%\hyperref[question-label]{click here}
+%\end{verbatim}
+%
+%The first part \texttt{[question-label]} is the label name and the second part \texttt{\{click here\}} is the text that is displayed as link.
+
+%------------------------------------------------
+
+\question{Types of jobs I am looking for}\label{change-title}
+
+Sorted by priority:
+\begin{enumerate}
+\item postdoc in particle physics
+\item scientist in physics
+\item postdoc in physical science
+\item scientist in physical science
+\item software engineer
+\end{enumerate}
+
+Only 1, 3 need references.
+
+%To change the main title, simply find the "TITLE AND LIST OF QUESTIONS" block and replace "A Template for FAQ's" within it. To change the subtitle find the following command:
+%
+%\begin{verbatim}
+%\newlistof{questions}{faq}{\large List of Frequently Asked Questions}
+%\end{verbatim}
+%
+%and replace the subtitle with one of your choosing.
+
+%------------------------------------------------
+
+\question{Goals for my career}\label{change-spacing}
+
+To pursue a challenging career where I can utilize my knowledge and skills acquired from my education to solve problems in physical science or even make discoveries.
+
+%Yes, simply find the following line:
+%
+%\begin{verbatim}
+%\setlength\cftparskip{.3em}
+%\end{verbatim}
+%
+%and change the \texttt{.3em} to whatever suits your fancy.
+
+%------------------------------------------------
+
+\end{document}

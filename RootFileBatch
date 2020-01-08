@@ -1,0 +1,24 @@
+#!/bin/sh
+storepath=~/eliza7/RootFile/Zhe
+command="nuwa.py -A none --random off --history off -n -1 -m run "
+findpath=/u/sklin/DryRunData/2010/TestDAQ/NoTag
+
+while read line
+do
+	for fn in `find $findpath -name "*000$line*"|grep data`
+	do
+		outfn=${fn#*_}
+		outfn=${outfn%.*}
+		outfn=${line}_${outfn}
+		${command} ${fn}
+	        for dmy in `ls|grep pending`
+		do
+        	        if [ "$dmy" = "pending.root" ]; then
+                	        finalfn=${outfn}.root
+	                else
+        	                finalfn=${outfn}_${dmy#*_}
+	                fi
+        	        mv -v $dmy ${storepath}/${finalfn}
+	        done
+	done
+done < "runlist"

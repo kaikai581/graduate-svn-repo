@@ -1,0 +1,46 @@
+\documentclass[10pt]{article}
+\special{papersize=8.5in,11in}
+\usepackage[latin1]{inputenc}
+\usepackage{libertine}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+
+\title{Personal Statement \textemdash \,Work Done on Daya Bay}
+\date{}
+\author{Shih-Kai Lin}
+
+\begin{document}
+\maketitle
+
+In this statement I am going to be very specific on the work I have done on Daya Bay. I will talk about hardware work which is followed by analysis work.
+
+\section*{HARDWARE}
+\subsection*{At University of Houston}
+\begin{itemize}
+	\item My first hardware task was to design a $^{60}$Co collimator for RPC response test. The requirement was to allow only a cone of $\gamma$ to come out of the collimator, no direct line of sight to the source and radiation is attenuated 90\% outside of the collimator. The collimator was made of brass, built at the machine shop of our department and served as our instrument to test RPC response to $\gamma$ rays.
+	\item Designed and built a small RPC chamber. Under the supervision of Kwong, we designed the frame of the RPC which we adopted FR-4 as the material to hold the bakelite sheets recycled from IHEP, how gas flows into the chamber through commercial Swagelok gas connectors and how to realize the electrodes contacting the graphite coating. Everything was machined at the department's machine shop. I machined the bakelite sheets under the supervision of the machine shop technician. The small chambers turned out to be working.
+\end{itemize}
+
+\subsection*{At Daya Bay}
+Participated in
+\begin{itemize}
+	\item RPC bare chamber quality assurance in IHEP for 3 months.
+	\item MACRO PMT pressure test.
+	\item AD PMT transportation from DGUT to Daya Bay.
+	\item RPC module installation.
+	\item Water pool PMT assembly, cable routing and cabling.
+\end{itemize}
+
+
+
+\section*{ANALYSIS}
+\begin{itemize}
+	\item RPC position reconstruction by identifying muon clusters to suppress cross-talk events.
+	\item RPC in situ efficiency and muon rate study.
+	\item Muon induced neutron study by making fiducial cut around the muon track so as to depend less on simulation to estimate neutron spill-in/out effects.
+	\item As a byproduct, I worked out a combined muon track reconstruction by combining every muon reconstruction points from RPC, inner and outer water pool. This is a straight line fitting problem in 3D and I worked it out by numerical linear algebra method.
+\end{itemize}
+
+\end{document}

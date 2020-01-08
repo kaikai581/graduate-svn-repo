@@ -1,0 +1,11 @@
+package RpcRawTree
+
+use GaudiAlg                 *
+use DybPolicy                * 
+use DybROOT                  *  External
+use ReadoutEvent             *  DataModel
+use CalibReadoutEvent        *  DataModel
+
+library RpcRawTree *.cc
+
+apply_pattern component_library library=RpcRawTree
